@@ -41,6 +41,7 @@ DESKTOP
 PANEL
 
 Display:
+=remove panel number 2
 unlock panel, drag to bottom and lock again
 Row size 30
 Dark mode:
