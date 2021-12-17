@@ -1,0 +1,112 @@
+install linux ubuntu minimal iso 18.04.6 LTS
+
+Optional:
+install lynx: sudo apt install lynx
+
+Xmonad setup:
+install xmonad: sudo apt install xmonad
+
+install xmonad extensions(contrib)
+search for name: apt search xmonad-contrib
+install: sudo apt install libghc-xmonad-contrib-dev
+
+install xterm(keyboard used for xmonad)
+install: sudo apt install xterm
+
+install dmenu(menu for opening programs in xmonad)
+install: sudo apt install dmenu
+
+install xinit(x server initialization tool)
+sudo apt install xinit
+
+start xmonad
+commands:
+initialization:startx
+open terminal:alt+shift+Enter
+close window:alt+shift+C
+open dmenu:alt+P
+shutdown xmonad:alt+shift+Q
+float tile: hold alt and move with left mouse 
+resize floating tile: hold alt and resize with right mouse
+retile: alt+t
+restore xmonad:alt+q
+
+install x11-xserver-utils to use command xrdb to change xterm color scheme
+sudo apt install x11-xserver-utils
+
+if xterm is white and black
+open nano:
+xterm*background: black
+xterm*foreground: lightgray
+save as ~/.Xresources
+update xterm
+xrdb .Xresources
+
+set x11 keyboard layout to br
+go to /etc/X11
+open Xsession
+add: setxkbmap br
+save and restart
+*on arch put setxkbmap on .xinitrc
+install audio drivers *somewhat it worked
+install:
+alsamixergui
+alsa-base
+alsa-utils
+alsa-oss
+gstreamer1.0-alsa
+libasound2
+libasound2-plugins
+pulseaudio
+pulseaudio-utils
+
+setting screen resolution on virtual machine
+downloaded virtualbox-guest-x11
+
+what seemed to work
+download virtualbox-guest-additions-iso
+go to /usr/share/virtualbox
+mount VBoxGuestAdditions.iso
+sudo mount VBoxGuestAdditions.iso ~/NAME OF FOLDER/ -o loop
+run autorun.sh
+sudo ./autorun.sh
+reboot
+
+config file
+search for xmonad config archive on haskell wiki
+download latest darcs template xmonad.hs
+move archive to .xmonad folder
+mv xmonad.hs ~/.xmonad/xmonad.hs
+
+changes on config file:
+width of red border
+myBorderWidth = 2
+
+modkey, default is alt(mod1mask), change to winkey(mod4mask)
+
+install compositor(compton)
+change startup hook
+myStartupHook = do
+	spawnOnce"compton &"
+need to import spawnOnce library
+*on arch: put nitrogen --restore and picom & on .xinitrc file BEFORE exec xmonad
+install bar(xmobar)
+get a config file:
+sudo find / -iname xmobar
+go to the documentation
+get the example config file
+create xmobar directory in ~/.config
+move xmobar.config to ~/.config/xmobar and rename to xmobarrc
+then change xmonad config main =... to
+main = do
+	xmproc <-spawnPipe "xmobar -x 0 ~/.config/xmobar/xmobarrc"
+now need to import managedocks to manage xmobar
+make the main = xmonad $ docks defaults
+add avoidStruts on layoutHook
+myLayout = avoidStruts (tiled...)
+change xmobar font
+open xbomarrc
+change font to xft:Ubuntu Mono :pixelsize=16:alias=true:hinting=true
+
+install nitrogen wallpaper manager
+install ubuntu-restricted-extras to see lives,(video codecs)
