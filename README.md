@@ -111,6 +111,7 @@ Window manager tweaks:
     unmark Show status icon in notification area
     
     Width: 60
+    
     height: 60
     
   Appearance:
@@ -121,3 +122,6 @@ Window manager tweaks:
     Opening New Windows:
       unmark Display menubar in new windows
       Geometry: 100 30
+      
+===================================================================
+install pamac-all to use pamac-tray on autostart and put on tray
