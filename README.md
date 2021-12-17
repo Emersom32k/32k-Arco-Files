@@ -45,3 +45,11 @@ Dark mode:
 no?
 
 Items:
+Whisker Menu(external)
+Window buttons
+Separator
+workspace Switcher
+Status tray Plugin(external)
+Pulseaudio Plugin(external)
+Clock
+Action Buttons(external)
