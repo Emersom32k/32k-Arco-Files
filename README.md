@@ -100,7 +100,7 @@ Window manager tweaks:
     x
      x
      
- Terminal preferences:
+Terminal preferences:
   General:
     Scrolling: unmark scroll on output
       Unlimited scrollback
