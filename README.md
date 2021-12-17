@@ -33,8 +33,10 @@ RGB
 
 DESKTOP
 
-Background:
-set /usr/share/backgrounds/arcolinux
+  Background:
+    set /usr/share/backgrounds/arcolinux
+  Icons:
+    Default Icons: unmark all
 
 PANEL
 
