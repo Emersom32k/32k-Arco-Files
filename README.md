@@ -25,7 +25,7 @@ icons:
 Sardi Arc
 
 fonts:
-noto sans regular
+noto sans regular 11
 Hinting:
 Slight
 Sub-pixel order:
