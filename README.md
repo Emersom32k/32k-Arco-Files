@@ -22,10 +22,10 @@ style:
 arc-dark
 
 icons:
-Sardi Arc
+Sardi Arc: sardi-icons: needs AUR: needs YAY: needs ssh
 
 fonts:
-noto sans regular 11
+noto sans regular 11: noto-fonts
 Hinting:
 Slight
 Sub-pixel order:
