@@ -125,3 +125,10 @@ Terminal preferences:
       
 ===================================================================
 install pamac-all to use pamac-tray on autostart and put on tray
+
+After Restart:
+
+How to get pulse audio sound mixer:
+install pavucontrol pulseaudio | maybe needs alsa-pulseaudio
+pulseaudio --check
+pulseaudio -D
