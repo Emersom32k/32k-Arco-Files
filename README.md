@@ -19,7 +19,7 @@ systemctl enable -f lightdm.service
 APPEARANCE
 
 style:
-arc-dark
+arc-dark: install arc-gtk-theme
 
 icons:
 Sardi Arc: sardi-icons: needs AUR: needs YAY: needs ssh
